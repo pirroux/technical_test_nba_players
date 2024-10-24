@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Player Stats for Prediction</h1>
+        <p>Example:
+            "GP": 10,
+            "MIN": 30,
+            "PTS": 20,
+            "FGM": 8,
+            "FGA": 15,
+            "3P Made": 3,
+            "3PA": 8,
+            "FTM": 5,
+            "FTA": 6,
+            "OREB": 1,
+            "DREB": 5,
+            "AST": 4,
+            "STL": 2,
+            "BLK": 1,
+            "TOV": 3
+        </p>
+        <form action="/predict" method="POST">
+            <label for="GP">Games Played (GP):</label>
+            <input type="number" id="GP" name="GP" required><br><br>
+
+            <label for="MIN">Minutes Played (MIN):</label>
+            <input type="number" step="any" id="MIN" name="MIN" required><br><br>
+
+            <label for="PTS">Points (PTS):</label>
+            <input type="number" step="any" id="PTS" name="PTS" required><br><br>
+
+            <label for="FGM">Field Goals Made (FGM):</label>
+            <input type="number" step="any" id="FGM" name="FGM" required><br><br>
+
+            <label for="FGA">Field Goals Attempted (FGA):</label>
+            <input type="number" step="any" id="FGA" name="FGA" required><br><br>
+
+            <label for="3P Made">3-Point Made:</label>
+            <input type="number" step="any" id="3P Made" name="3P Made" required><br><br>
+
+            <label for="3PA">3-Point Attempted:</label>
+            <input type="number" step="any" id="3PA" name="3PA" required><br><br>
+
+            <label for="FTM">Free Throws Made (FTM):</label>
+            <input type="number" step="any" id="FTM" name="FTM" required><br><br>
+
+            <label for="FTA">Free Throws Attempted (FTA):</label>
+            <input type="number" step="any" id="FTA" name="FTA" required><br><br>
+
+            <label for="OREB">Offensive Rebounds (OREB):</label>
+            <input type="number" step="any" id="OREB" name="OREB" required><br><br>
+
+            <label for="DREB">Defensive Rebounds (DREB):</label>
+            <input type="number" step="any" id="DREB" name="DREB" required><br><br>
+
+            <label for="AST">Assists (AST):</label>
+            <input type="number" step="any" id="AST" name="AST" required><br><br>
+
+            <label for="STL">Steals (STL):</label>
+            <input type="number" step="any" id="STL" name="STL" required><br><br>
+
+            <label for="BLK">Blocks (BLK):</label>
+            <input type="number" step="any" id="BLK" name="BLK" required><br><br>
+
+            <label for="TOV">Turnovers (TOV):</label>
+            <input type="number" step="any" id="TOV" name="TOV" required><br><br>
+
+            <input type="submit" value="Get Prediction">
+        </form>
+    </div>
+</body>
+</html>
